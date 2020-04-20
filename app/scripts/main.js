@@ -1,17 +1,16 @@
 
 document.querySelector('a-entity').addEventListener('click', function (evt) {
   var currentVideo = evt.detail.intersection.object.el;
-  var currentVideoName = currentVideo.id+'Video';
-  playVideo(currentVideoName)
+  var currentVideoID = currentVideo.id+'Video';
+  playVideo(currentVideoID)
 });
 
 
-function playVideo(currentVideoName) {
+function playVideo(currentVideoID) {
 
-
-  var vid = document.getElementById(currentVideoName);
-
-  console.log(vid);
-  vid.play();
+  var video = document.getElementById(currentVideoID);
+  console.log(video);
+  video.play();
+  video.muted = !video.muted;
 
 }

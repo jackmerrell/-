@@ -20,11 +20,10 @@
   </head>
   <body>
 
-    <a-scene>
+  <a-scene vr-mode-ui="enabled: false">
       <a-assets>
-        <video id="rosieVideo" preload src="/images/rosie.mp4"></video>
-        <video id="maeveVideo" preload src="/images/maeve.mp4"></video>
-
+        <video id="rosieVideo" preload playsinline muted src="/images/rosie.mp4"></video>
+        <video id="maeveVideo" preload playsinline muted src="/images/maeve.mp4"></video>
       </a-assets>
 
   <a-camera id="camera">
