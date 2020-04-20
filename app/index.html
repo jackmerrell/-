@@ -13,21 +13,19 @@
     <!-- build:js scripts/modernizr.js -->
     <script src="scripts/modernizr.js"></script>
     <!-- endbuild -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   </head>
   <body>
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>jQuery</li>
-      </ul>
-    </div>
+
+    <a-scene>
+      <a-assets>
+        <video id="hbd-video" muted autoplay loop="true" src="/images/hbd-video.mp4"></video>
+      </a-assets>
+
+      <a-video src="#hbd-video" width="9" height="16" position="0 0 -20"></a-video>
+
+    </a-scene>
+
     <!-- build:js scripts/vendor.js -->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
     <!-- endbuild -->
