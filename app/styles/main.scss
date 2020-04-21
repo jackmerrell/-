@@ -1,39 +1,96 @@
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+html {
+font-size: 100%;
 }
 
 body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+  background: white;
+  font-family: 'Playfair Display', serif;
+  text-rendering: optimizeLegibility;
+  color:#1A1108;
+  margin:0;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.loading{
+  height: 100vh;
+  width: 100vw;
+  background: #FCD8BE;
+  position: absolute;
+  z-index: 1000;
+  border-bottom: 100vh solid #E13760;
+}
+
+.hidden{
+animation: reveal 1500ms cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
+}
+
+@keyframes reveal {
+  from {
+    margin-top: 0px;
+  }
+
+  to {
+    margin-top: -200vh;
   }
 }
 
-.test-button {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px;
-  background-color: pink;
-  z-index: 1;
-  cursor: pointer;
+main{
+  padding:5rem;
 }
+
+h1{
+  font-size: 8.2rem;
+  line-height: 1.2rem;
+}
+
+h2{
+  font-size: 4.5rem;
+  line-height: 1.8rem;
+}
+
+p{
+  font-family: helvetica;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+
+}
+
+footer{
+  margin-top: 150px;
+  bottom:0;
+  padding-left: 5rem;
+}
+
+
+button {
+  background-color: #E13760;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 0;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(26,17,8,0.25);
+  font-size: 1.4rem;
+  transition: all 200ms;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px 7.5px rgba(26,17,8,0.33);
+}
+
+
+@media only screen and (max-width: 768px) {
+    html {
+      font-size: 8px;
+      letter-spacing: -0.1rem;
+    }
+    button{
+      font-size: 1.8rem;
+    }
+    p{
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+
+  }

@@ -8,6 +8,7 @@
     <title>louby 30</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- build:css styles/main.css -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <!-- build:js scripts/modernizr.js -->
@@ -17,10 +18,19 @@
     <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script>
   </head>
   <body>
-  
-  <button id="test-button" class="test-button">
-    click to tell the browser that we are ok with playing some video content on this site
-  </button>
+
+  <div id="loadingScreen" class="loading">
+    <main>
+      <h2>💃</h2>
+      <h2>Happy Birthday</h2>
+      <h1>LOUISE!</h1>
+      <button id="test-button" class="test-button">Let the party commence! 🎉</button>
+      </main>
+    <footer>
+      <p>Made with ❤️</br>by Jack William Merrell</p>
+    </footer>
+  </div>
+
 
   <a-scene vr-mode-ui="enabled: false">
     <a-assets>
@@ -39,9 +49,12 @@
       </a-entity>
     </a-camera>
 
-    <a-video id="rosie" src="#rosieVideo" width="9" height="16" position="-10 0 -20" look-at="#camera"></a-video>
-    <a-video id="maeve" src="#maeveVideo" width="9" height="16" position="10 0 -20" look-at="#camera"></a-video>
-    <a-video id="emily" src="#emilyVideo" width="9" height="16" position="0 15 -20" look-at="#camera"></a-video>
+    <a-sky color="#FCD8BE"></a-sky>
+
+
+    <a-video id="rosie" src="#rosieVideo" width="9" height="16" position="-10 5 -20" look-at="#camera"></a-video>
+    <a-video id="maeve" src="#maeveVideo" width="9" height="16" position="10 5 -20" look-at="#camera"></a-video>
+    <a-video id="emily" src="#emilyVideo" width="9" height="16" position="-20 -5 -10" look-at="#camera"></a-video>
 
 
     </a-scene>
