@@ -20,7 +20,7 @@ body {
 }
 
 .hidden{
-animation: reveal 1500ms cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
+animation: reveal 1500ms cubic-bezier(0.6, -0.6, 0.32, 1.6) forwards;
 }
 
 @keyframes reveal {
@@ -55,7 +55,7 @@ p{
 }
 
 footer{
-  margin-top: 150px;
+  position: absolute;
   bottom:0;
   padding-left: 5rem;
 }
@@ -76,7 +76,7 @@ button {
 
 button:hover {
   transform: scale(1.05);
-  box-shadow: 0px 0px 20px 7.5px rgba(26,17,8,0.33);
+  box-shadow: 0px 0px 20px 7.5px rgba(26,17,8,0.2);
 }
 
 
