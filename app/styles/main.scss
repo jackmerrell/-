@@ -56,10 +56,22 @@ p{
 
 footer{
   position: absolute;
-  bottom:0;
+  bottom:2rem;
   padding-left: 5rem;
 }
 
+.a-dialog-text{
+  letter-spacing: 0.05rem;
+}
+
+.a-dialog-button {
+  border-radius: 5px!important;
+}
+
+.a-dialog-ok-button{
+  background-color: #E13760 !important;
+  color: white;
+}
 
 button {
   background-color: #E13760;
