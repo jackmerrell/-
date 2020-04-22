@@ -36,13 +36,24 @@
 
   <a-scene vr-mode-ui="enabled: false" loading-screen="false" shadow="enabled:true">
     <a-assets>
+      <video id="jackVideo" preload playsinline src="/images/jack.mp4" type="video/mp4"></video>
+      <video id="dickieVideo" preload playsinline src="/images/dickie.mp4" type="video/mp4"></video>
       <video id="rosieVideo" preload playsinline src="/images/rosie.mp4" type="video/mp4"></video>
       <video id="maeveVideo" preload playsinline src="/images/maeve.mp4" type="video/mp4"></video>
       <video id="emilyVideo" preload playsinline src="/images/emily.mp4" type="video/mp4"></video>
       <video id="markVideo" preload playsinline src="/images/mark.mp4" type="video/mp4"></video>
       <video id="nickVideo" preload playsinline src="/images/nick.mp4" type="video/mp4"></video>
+      <video id="amyVideo" preload playsinline src="/images/amy.mp4" type="video/mp4"></video>
+      <video id="joshVideo" preload playsinline src="/images/josh.mp4" type="video/mp4"></video>
+      <video id="liamVideo" preload playsinline src="/images/liam.mp4" type="video/mp4"></video>
+      <video id="lozVideo" preload playsinline src="/images/loz.mp4" type="video/mp4"></video>
+      <video id="tombVideo" preload playsinline src="/images/tomb.mp4" type="video/mp4"></video>
       <video id="adamVideo" preload playsinline src="/images/adam.mp4" type="video/mp4"></video>
+      <video id="tomdVideo" preload playsinline src="/images/tomd.mp4" type="video/mp4"></video>
+      <video id="mattVideo" preload playsinline src="/images/matt.mp4" type="video/mp4"></video>
 
+
+      <!-- lou -->
       <video id="lou00Video" preload playsinline src="/images/lou00.mp4" type="video/mp4"></video>
       <video id="lou02Video" preload playsinline src="/images/lou02.mp4" type="video/mp4"></video>
       <video id="lou03Video" preload playsinline src="/images/lou03.mp4" type="video/mp4"></video>
@@ -63,17 +74,27 @@
     <a-sky color="#FCD8BE"></a-sky>
     <a-plane material="shader: flat; color: #ffe5d2" rotation="-90 0 0" position="0 -20 0" width="10000" height="10000" shadow="receive:true"></a-plane>
 
+    <a-video id="jack" src="#jackVideo" width="9" height="16" position="-10 5 -20" look-at="#camera"></a-video>
+    <a-video id="dickie" src="#dickieVideo" width="9" height="16" position="-10 20 5" look-at="#camera"></a-video>
 
-    <a-video id="rosie" src="#rosieVideo" width="9" height="16" position="-10 5 -20" look-at="#camera"></a-video>
+    <a-video id="rosie" src="#rosieVideo" width="9" height="16" position="-10 20 -10" look-at="#camera"></a-video>
     <a-video id="maeve" src="#maeveVideo" width="9" height="16" position="20 5 5" look-at="#camera"></a-video>
-    <a-video id="emily" src="#emilyVideo" width="9" height="16" position="-20 -5 -10" look-at="#camera"></a-video>
-    <a-video id="mark" src="#markVideo" width="9" height="9" position="20 15 -20" look-at="#camera"></a-video>
+    <a-video id="emily" src="#emilyVideo" width="9" height="16" position="-20 0 -15" look-at="#camera"></a-video>
+    <a-video id="mark" src="#markVideo" width="9" height="9" position="20 25 -15" look-at="#camera"></a-video>
     <a-video id="nick" src="#nickVideo" width="16" height="9" position="5 10 10" look-at="#camera"></a-video>
+    <a-video id="amy" src="#amyVideo" width="9" height="14" position="-25 10 10" look-at="#camera"></a-video>
+    <a-video id="josh" src="#joshVideo" width="12" height="8" position="20 15 -20" look-at="#camera"></a-video>
+    <a-video id="liam" src="#liamVideo" width="12" height="8" position="-10 0 20" look-at="#camera"></a-video>
+    <a-video id="loz" src="#lozVideo" width="9" height="16" position="-25 -5 15" look-at="#camera"></a-video>
+    <a-video id="tomb" src="#tombVideo" width="9" height="16" position="-30 0 0" look-at="#camera"></a-video>
     <a-video id="adam" src="#adamVideo" width="9" height="16" position="-10 15 15" look-at="#camera"></a-video>
+    <a-video id="tomd" src="#tomdVideo" width="12" height="8" position="20 -15 -15" look-at="#camera"></a-video>
+    <a-video id="matt" src="#mattVideo" width="9" height="16" position="20 0 -10" look-at="#camera"></a-video>
 
+    <!-- lou -->
     <a-video id="lou00" src="#lou00Video" width="9" height="16" position="10 0 -20" look-at="#camera"></a-video>
     <a-video id="lou02" src="#lou02Video" width="9" height="16" position="10 -10 15" look-at="#camera"></a-video>
-    <a-video id="lou03" src="#lou03Video" width="9" height="16" position="0 0 20" look-at="#camera"></a-video>
+    <a-video id="lou03" src="#lou03Video" width="9" height="16" position="0 0 25" look-at="#camera"></a-video>
     <a-video id="lou09" src="#lou09Video" width="16" height="9" position="20 -15 5" look-at="#camera"></a-video>
     <a-video id="lou10" src="#lou10Video" width="16" height="9" position="-25 15 -5" look-at="#camera"></a-video>
 
