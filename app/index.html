@@ -34,7 +34,7 @@
   </div>
 
 
-  <a-scene vr-mode-ui="enabled: false">
+  <a-scene vr-mode-ui="enabled: false" loading-screen="false" shadow="enabled:true">
     <a-assets>
       <video id="rosieVideo" preload playsinline src="/images/rosie.mp4" type="video/mp4"></video>
       <video id="maeveVideo" preload playsinline src="/images/maeve.mp4" type="video/mp4"></video>
@@ -56,11 +56,12 @@
             cursor="fuse: true; fuseTimeout: 1000;"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.015; radiusOuter: 0.02"
-            material="color: black; shader: flat">
+            material="color: #E13760; shader: flat">
       </a-entity>
     </a-camera>
 
     <a-sky color="#FCD8BE"></a-sky>
+    <a-plane material="shader: flat; color: #ffe5d2" rotation="-90 0 0" position="0 -20 0" width="10000" height="10000" shadow="receive:true"></a-plane>
 
 
     <a-video id="rosie" src="#rosieVideo" width="9" height="16" position="-10 5 -20" look-at="#camera"></a-video>
