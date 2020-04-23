@@ -23,7 +23,7 @@ body {
 }
 
 .hidden{
-animation: reveal 15ms cubic-bezier(0.7, 0, 0.84, 0) forwards;
+animation: reveal 1500ms cubic-bezier(0.7, 0, 0.84, 0) forwards;
 }
 
 @keyframes reveal {
