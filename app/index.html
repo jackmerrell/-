@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="description" content="Happy Birthday Louise! Sorry you're not able to spend your Birthday surrounded by everyone that loves you, but hopfully this is one way to try and bring those people a little closer to you.">
+    <meta name="description" content="Social distancing? Not for us!">
     <title>Happy Birthday Louise!</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
   <body>
 
   <div id="loadingScreen" class="loading">
-    <main>
+    <section>
       <h1>—</h1>
       <h1>Social distancing?</h1>
       <h1>Not for us!</h1>
@@ -32,16 +32,16 @@
       <h1>Louise!</h1>
       <h2>💃</h2>
       <button id="start-button" class="start-button">Let the celebrations begin → </button>
-      </main>
+    </section>
     <footer>
       <p>Made with ❤️<br>by Jack W. Merrell<br>—<br>25/04/2020</p>
     </footer>
   </div>
 
-
   <a-scene vr-mode-ui="enabled:false" light="defaultLightsEnabled:false" loading-screen="false" background="color:#FCD8BE">
     <a-assets>
-      <video id="jackVideo" preload playsinline poster="/images/jack.jpg" src="/images/jack.mp4" type="video/mp4"></video>
+      <video id="jackVideo" preload playsinline src="/images/jack.mp4" type="video/mp4"></video>
+      <video id="louVideo" preload playsinline src="/images/lou.mp4" type="video/mp4"></video>
       <video id="dickieVideo" preload playsinline src="/images/dickie.mp4" type="video/mp4"></video>
       <video id="rosieVideo" preload playsinline src="/images/rosie.mp4" type="video/mp4"></video>
       <video id="maeveVideo" preload playsinline src="/images/maeve.mp4" type="video/mp4"></video>
@@ -72,10 +72,7 @@
       <video id="pollyVideo" preload playsinline src="/images/polly.mp4" type="video/mp4"></video>
       <video id="randcVideo" preload playsinline src="/images/randc.mp4" type="video/mp4"></video>
       <video id="stephVideo" preload playsinline src="/images/steph.mp4" type="video/mp4"></video>
-      <!-- lou -->
-      <video id="lou00Video" preload playsinline src="/images/lou00.mp4" type="video/mp4"></video>
-      <video id="lou03Video" preload playsinline src="/images/lou03.mp4" type="video/mp4"></video>
-      <video id="lou09Video" preload playsinline src="/images/lou09.mp4" type="video/mp4"></video>
+
     </a-assets>
 
     <a-camera id="loadingCamera" active="true" look-controls="enabled: false" spectator="true" rotation="-10 0 0"  position="-20 80 120">
@@ -90,11 +87,12 @@
     </a-entity>
 
     <a-entity id="videosContainer" animation="property: rotation; to: 360 360 360; loop: true; dur: 25000; easing: linear;">
-      <a-video id="jack" src="#jackVideo" width="9" height="16" position="-10 0 -20" look-at="#camera"></a-video>
+      <a-video id="jack" src="#jackVideo" width="9" height="16" position="-15 0 -20" look-at="#camera"></a-video>
+      <a-video id="lou" src="#louVideo" width="9" height="16" position="5 0 -20" look-at="#camera"></a-video>
       <a-video id="dickie" src="#dickieVideo" width="9" height="16" position="-25 17 -5" look-at="#camera"></a-video>
       <a-video id="rosie" src="#rosieVideo" width="9" height="16" position="15 -15 25" look-at="#camera"></a-video>
       <a-video id="maeve" src="#maeveVideo" width="9" height="16" position="30 2 15" look-at="#camera"></a-video>
-      <a-video id="emily" src="#emilyVideo" width="9" height="16" position="-25 0 -10" look-at="#camera"></a-video>
+      <a-video id="emily" src="#emilyVideo" width="9" height="16" position="5 -7 30" look-at="#camera"></a-video>
       <a-video id="mark" src="#markVideo" width="9" height="9" position="28 0 4" look-at="#camera"></a-video>
       <a-video id="nick" src="#nickVideo" width="16" height="9" position="5 15 30" look-at="#camera"></a-video>
       <a-video id="amy" src="#amyVideo" width="9" height="14" position="-25 15 10" look-at="#camera"></a-video>
@@ -113,7 +111,7 @@
       <a-video id="katie" src="#katieVideo" width="9" height="9" position="20 10 20" look-at="#camera"></a-video>
       <a-video id="eves" src="#evesVideo" width="16" height="9" position="-20 -12 0" look-at="#camera"></a-video>
       <a-video id="emma" src="#emmaVideo" width="9" height="16" position="-22 15 22" look-at="#camera"></a-video>
-      <a-video id="george" src="#georgeVideo" width="16" height="9" position="5 28 30" look-at="#camera"></a-video>
+      <a-video id="george" src="#georgeVideo" width="16" height="9" position="25 -14 0" look-at="#camera"></a-video>
       <a-video id="kelly" src="#kellyVideo" width="9" height="16" position="30 -2 -6" look-at="#camera"></a-video>
       <a-video id="kside" src="#ksideVideo" width="9" height="16" position="-30 0 10" look-at="#camera"></a-video>
       <a-video id="max" src="#maxVideo" width="9" height="16" position="-20 -20 15" look-at="#camera"></a-video>
@@ -122,9 +120,6 @@
       <a-video id="randc" src="#randcVideo" width="16" height="9" position="-5 -18 20" look-at="#camera"></a-video>
       <a-video id="steph" src="#stephVideo" width="9" height="16" position="25 -15 15" look-at="#camera"></a-video>
       <!-- lou -->
-      <a-video id="lou00" src="#lou00Video" width="9" height="16" position="10 0 -20" look-at="#camera"></a-video>
-      <a-video id="lou03" src="#lou03Video" width="9" height="16" position="5 -7 30" look-at="#camera"></a-video>
-      <a-video id="lou09" src="#lou09Video" width="16" height="9" position="25 -15 0" look-at="#camera"></a-video>
     </a-entity>
 
     </a-scene>
