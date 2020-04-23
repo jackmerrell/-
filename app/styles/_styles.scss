@@ -1,0 +1,91 @@
+html {
+font-size: 100%;
+}
+
+body {
+  background: #FCD8BE;
+  text-rendering: optimizeLegibility;
+  color:#1A1108;
+  margin:0;
+}
+
+.loading{
+  height: 100vh;
+  width: 100vw;
+  // background: #FCD8BE;
+  position: absolute;
+  z-index: 1000;
+}
+
+.hidden{
+animation: reveal 1000ms cubic-bezier(0.7, 0, 0.84, 0) forwards;
+}
+
+@keyframes reveal {
+  from {
+    margin-top: 0px;
+  }
+
+  to {
+    margin-top: -100vh;
+  }
+}
+
+main{
+  padding:2rem 0 0 5rem;
+}
+
+h1{
+  font-family: 'FogtwoNo5', serif;
+  font-weight: 100;
+  font-size: 4rem;
+  line-height: 1.2rem;
+  font-weight: 100;
+}
+
+h2{
+  font-size: 3.6rem;
+  line-height: 1.4rem;
+  font-weight: 100;
+}
+
+p{
+  font-family: monospace;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+
+}
+
+footer{
+  padding: 5rem;
+}
+
+.a-dialog-text{
+  letter-spacing: 0.05rem;
+}
+
+.a-dialog-button {
+  border-radius: 5px!important;
+}
+
+.a-dialog-ok-button{
+  background-color: #C0001E !important;
+  color: white;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #C0001E;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  margin: 50px 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 200ms;
+}
+
+button:hover {
+  background-color: #9D021A;
+}

@@ -8,9 +8,9 @@
     <meta name="description" content="Happy Birthday Louise! Sorry you're not able to spend your Birthday surrounded by everyone that loves you, but hopfully this is one way to try and bring those people a little closer to you -Let the party commence! 🎉">
 
     <title>Happy Birthday Louise!</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <!-- build:css styles/main.css -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <!-- build:js scripts/modernizr.js -->
@@ -23,18 +23,25 @@
 
   <div id="loadingScreen" class="loading">
     <main>
+      <h1>—</h1>
+      <h1>Social distancing?</h1>
+      <h1>Not for us!</h1>
+      <br>
+      <h1>To the love of my life,</h1>
+      <h1>from the loves of your life.</h1>
+      <br>
+      <h1>Happy Birthday</h1>
+      <h1>Louise!</h1>
       <h2>💃</h2>
-      <h2>Happy Birthday</h2>
-      <h1>LOUISE!</h1>
-      <button id="test-button" class="test-button">Let the party commence! 🎉</button>
+      <button id="start-button" class="start-button">Let the celebrations begin → </button>
       </main>
     <footer>
-      <p>Made with ❤️<br>by Jack William Merrell</p>
+      <p>Made with ❤️<br>by Jack W. Merrell<br>—<br>25/04/2020</p>
     </footer>
   </div>
 
 
-  <a-scene vr-mode-ui="enabled: false" loading-screen="false" shadow="enabled:true">
+  <a-scene vr-mode-ui="enabled:false" light="defaultLightsEnabled:false" loading-screen="false" background="color:#FCD8BE">
     <a-assets>
       <video id="jackVideo" preload playsinline src="/images/jack.mp4" type="video/mp4"></video>
       <video id="dickieVideo" preload playsinline src="/images/dickie.mp4" type="video/mp4"></video>
@@ -51,40 +58,38 @@
       <video id="adamVideo" preload playsinline src="/images/adam.mp4" type="video/mp4"></video>
       <video id="tomdVideo" preload playsinline src="/images/tomd.mp4" type="video/mp4"></video>
       <video id="mattVideo" preload playsinline src="/images/matt.mp4" type="video/mp4"></video>
-
       <video id="catVideo" preload playsinline src="/images/cat.mp4" type="video/mp4"></video>
       <video id="izzieVideo" preload playsinline src="/images/izzie.mp4" type="video/mp4"></video>
       <video id="katyVideo" preload playsinline src="/images/katy.mp4" type="video/mp4"></video>
       <video id="lucyVideo" preload playsinline src="/images/lucy.mp4" type="video/mp4"></video>
       <video id="tommyVideo" preload playsinline src="/images/tommy.mp4" type="video/mp4"></video>
 
-
       <!-- lou -->
-      <video id="lou00Video" preload playsinline src="/images/lou00.mp4" type="video/mp4"></video>
-      <video id="lou02Video" preload playsinline src="/images/lou02.mp4" type="video/mp4"></video>
-      <video id="lou03Video" preload playsinline src="/images/lou03.mp4" type="video/mp4"></video>
-      <video id="lou09Video" preload playsinline src="/images/lou09.mp4" type="video/mp4"></video>
-      <video id="lou10Video" preload playsinline src="/images/lou10.mp4" type="video/mp4"></video>
+      <video id="lou00Video" preload playsinline poster="/images/jack.jpg" src="/images/lou00.mp4" type="video/mp4"></video>
+      <video id="lou02Video" preload playsinline poster="/images/jack.jpg" src="/images/lou02.mp4" type="video/mp4"></video>
+      <video id="lou03Video" preload playsinline poster="/images/jack.jpg" src="/images/lou03.mp4" type="video/mp4"></video>
+      <video id="lou09Video" preload playsinline poster="/images/jack.jpg" src="/images/lou09.mp4" type="video/mp4"></video>
+      <video id="lou10Video" preload playsinline poster="/images/jack.jpg" src="/images/lou10.mp4" type="video/mp4"></video>
 
     </a-assets>
 
-    <a-camera  look-controls wasd-controls="acceleration:500" rotation-reader>
-      <a-entity
-            cursor="fuse: true; fuseTimeout: 1000;"
+    <a-camera id="loadingCamera" active="true" look-controls="enabled: false" spectator="true"  position="0 100 250">
+    </a-camera>
+
+    <a-camera id="videoCamera" active="false" look-controls wasd-controls="acceleration:500">
+      <a-entity id="cursor"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.015; radiusOuter: 0.02"
-            material="color: #E13760; shader: flat">
+            material="color: #9D021A; shader: flat">
       </a-entity>
     </a-camera>
 
-    <a-entity id="camera"> </a-entity>
+    <a-entity id="camera" rotation-reader></a-entity>
 
-    <a-sky color="#FCD8BE"></a-sky>
-    <a-plane material="shader: flat; color: #ffe5d2" rotation="-90 0 0" position="0 -20 0" width="10000" height="10000" shadow="receive:true"></a-plane>
+    <a-entity id="videosContainer" animation="property: rotation; to: 360 360 360; loop: true; dur: 25000; easing: linear;">
 
     <a-video id="jack" src="#jackVideo" width="9" height="16" position="-10 0 -20" look-at="#camera"></a-video>
     <a-video id="dickie" src="#dickieVideo" width="9" height="16" position="-10 20 -10" look-at="#camera"></a-video>
-
     <a-video id="rosie" src="#rosieVideo" width="9" height="16" position="-15 25 5" look-at="#camera"></a-video>
     <a-video id="maeve" src="#maeveVideo" width="9" height="16" position="30 0 15" look-at="#camera"></a-video>
     <a-video id="emily" src="#emilyVideo" width="9" height="16" position="-25 0 -10" look-at="#camera"></a-video>
@@ -97,10 +102,9 @@
     <a-video id="tomb" src="#tombVideo" width="9" height="16" position="-30 0 0" look-at="#camera"></a-video>
     <a-video id="adam" src="#adamVideo" width="9" height="16" position="-10 15 15" look-at="#camera"></a-video>
     <a-video id="tomd" src="#tomdVideo" width="12" height="8" position="20 -15 -15" look-at="#camera"></a-video>
-    <a-video id="matt" src="#mattVideo" width="9" height="16" position="20 0 -10" look-at="#camera"></a-video>
-
+    <a-video id="matt" src="#mattVideo" width="9" height="16" position="30 15 0" look-at="#camera"></a-video>
     <a-video id="cat" src="#catVideo" width="9" height="9" position="0 3 30" look-at="#camera"></a-video>
-    <a-video id="izzie" src="#izzieVideo" width="9" height="16" position="30 15 0" look-at="#camera"></a-video>
+    <a-video id="izzie" src="#izzieVideo" width="9" height="16" position="20 0 -10" look-at="#camera"></a-video>
     <a-video id="katy" src="#katyVideo" width="9" height="16" position="30 20 15" look-at="#camera"></a-video>
     <a-video id="lucy" src="#lucyVideo" width="16" height="9" position="15 0 20" look-at="#camera"></a-video>
     <a-video id="tommy" src="#tommyVideo" width="9" height="16" position="-10 -15 15" look-at="#camera"></a-video>
@@ -113,10 +117,7 @@
     <a-video id="lou09" src="#lou09Video" width="16" height="9" position="20 -15 5" look-at="#camera"></a-video>
     <a-video id="lou10" src="#lou10Video" width="16" height="9" position="-25 15 -5" look-at="#camera"></a-video>
 
-
-
-
-
+    </a-entity>
 
     </a-scene>
     <!-- build:js scripts/vendor.js -->
