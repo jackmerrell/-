@@ -31,9 +31,9 @@ for (let i = 0, total = entities.length; i < total; i++) {
 function changeCamera(){
   loadingCamera.setAttribute('camera', 'active', false);
   videoCamera.setAttribute('camera', 'active', true);
-
-  loadingCamera.setAttribute('animation', 'property:position; from:0 100 250; to:0 0 0; duration:2000;');
-  videosContainer.removeAttribute('animation');
-  videosContainer.setAttribute('rotation','0 0 0');
-  cursor.setAttribute('cursor','fuse: true;');
+  loadingCamera.setAttribute('animation', 'property:position; from:-20 80 120; to:0 0 0; dur:2000;');
+  loadingCamera.setAttribute('animation__2', 'property:rotation; from:-10 0 0; to:0 0 0; dur:2000;');
+  videosContainer.setAttribute('animation', 'property:rotation; to:0 0 0; dur:2000; loop: false;');
+  setTimeout(function(){
+    cursor.setAttribute('cursor','fuse: true;'); }, 2000);
 }

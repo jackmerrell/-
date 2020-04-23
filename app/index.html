@@ -43,7 +43,7 @@
 
   <a-scene vr-mode-ui="enabled:false" light="defaultLightsEnabled:false" loading-screen="false" background="color:#FCD8BE">
     <a-assets>
-      <video id="jackVideo" preload playsinline src="/images/jack.mp4" type="video/mp4"></video>
+      <video id="jackVideo" preload playsinline poster="/images/jack.jpg" src="/images/jack.mp4" type="video/mp4"></video>
       <video id="dickieVideo" preload playsinline src="/images/dickie.mp4" type="video/mp4"></video>
       <video id="rosieVideo" preload playsinline src="/images/rosie.mp4" type="video/mp4"></video>
       <video id="maeveVideo" preload playsinline src="/images/maeve.mp4" type="video/mp4"></video>
@@ -74,7 +74,7 @@
 
     </a-assets>
 
-    <a-camera id="loadingCamera" active="true" look-controls="enabled: false" spectator="true"  position="0 100 250">
+    <a-camera id="loadingCamera" active="true" look-controls="enabled: false" spectator="true" rotation="-10 0 0"  position="-20 80 120">
     </a-camera>
 
     <a-camera id="videoCamera" active="false" look-controls wasd-controls="acceleration:500">
